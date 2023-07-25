@@ -1,0 +1,85 @@
+<!-- oneway binding-->
+<h1>{{firstName}} {{lastName}}</h1> <!--string interplation{{}}-->
+<!--Property binding-->
+<h2 [innerText]="title"></h2><!--property binding[]-->
+<!--Two way binding-->
+<h3>{{name}}</h3><!--string interplation{{}}-->
+<br>
+<input type="text" [(ngModel)]="name"> <!--Twoway binding[()]-->
+
+<!--String interpolation-->
+<h1>{{title}} Tulip!</h1> <!--input variable-->
+
+<h2>{{'Hello' + ' World' + ' Tulip'}}</h2> <!--input expression ""-->
+
+<h1>{{getTitle()}}</h1> <!--input function-->
+
+<p>100*5 = {{100*5}}</p>
+<p>Largest number : {{getMax(150,200)}}</p>
+
+ <!--string interpolation in element property-->
+ <p style.color="{{color}}">This is purple</p>
+
+ <!--Property binding-->
+ <button [disabled]="isDisabled">Click Me!</button>
+
+ <!--Event binding-->
+ <p>you have clicked {{clickCount}}</p>
+  <button (click)="clickMe()">Clickme!</button> <!--use on-click, on-keypress, on-change, on-keydown-->
+
+<!--ngClass Directive-->
+<div [ngClass]="['primary','big']">Sample Text</div>
+<div [ngClass]="{'primary':false}">Sample Text</div>
+color<input type="checkbox" [(ngModel)]="isEnabled">
+big<input type="checkbox"[(ngModel)]="enableBig">
+italic<input type="checkbox" [(ngModel)]="enableItalic">
+<div [ngClass]=
+        "{'secondary':isEnabled,
+          'big' : enableBig,
+          'italic':enableItalic
+        }">
+        Sample Angular</div>
+
+
+<!--ngStyle Directive-->
+<div [ngStyle]="{'color':'red','font-size':'30px'}">Welcome to Angular</div>
+<div [ngStyle]="{'color':status == 'success' ? 'red': 'blue'}">Welcome Tulip!</div>
+
+Color: <input type="text" [(ngModel)]="color">
+<div [ngStyle]="{'color':color}">Hello World!</div>
+
+Color: <input type="text" [(ngModel)]="color">
+<div [ngStyle]="{'background-color':color}">Hello World!</div>
+
+<!--DATE PIPE-->
+
+<p>Unformatted date: {{toDate}}</p>
+<p>Formatted date: DATE {{toDate | date}}</p>
+<p>Formatted date: DATE AND TIME {{toDate | date : 'medium'}}</p>
+<p>Formatted date: NUM DATE AND TIME {{toDate | date : 'short'}}</p>
+<p>Formatted date: DAY AND DATE {{toDate | date : 'fullDate'}}</p>
+<p>Formatted date: FULL MONTH {{toDate | date : 'longDate'}}</p>
+
+<!--UPPER/lower case PIPE-->
+ <p>Original: {{message}}</p>
+ <p>UPPERCASE: {{message|uppercase}}</p>
+ <p>lowercase: {{message|lowercase}}</p>
+
+ <!--Slice pipe-->
+ <p>Original: {{message}}</p>
+ <p>example1: {{message|slice:0:7}}</p>
+ <p>example2: {{message|slice:-7}}</p>
+
+ <!--currency pipe-->
+ <p>Price without formatting: {{price}}</p>
+ <p>Price with formatting: {{price|currency}}</p>
+ <p>Price with formatting: {{price|currency:'INR' }}</p>
+ <p>Price with formatting: {{price|currency:'INR':false  }}</p>
+
+
+
+
+
+
+
+

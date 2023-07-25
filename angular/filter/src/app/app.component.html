@@ -1,0 +1,9 @@
+<div class="input">
+    Select:
+    <input class="listOfItems" [ngClass]="{'active': showList}" (click)="toggleList()" [(ngModel)]="selectedItem" placeholder="Select car" >
+    <span>&#8964;</span>
+</div>
+
+<app-list *ngIf="showList" [selectedItem]="selectedItem" (itemSelected)="selectItem($event)"></app-list>
+<!--<h1>Dropdown List</h1>
+<app-input></app-input>-->

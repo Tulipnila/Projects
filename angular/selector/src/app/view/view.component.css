@@ -1,0 +1,7 @@
+input{
+    position: relative;
+}
+span{
+    position: absolute;
+    right:90px;
+}

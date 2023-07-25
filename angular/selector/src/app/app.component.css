@@ -1,0 +1,45 @@
+/*.container{
+    width: 800px;
+    height: 500px;
+    background-color: aliceblue;
+    position: relative;
+}
+.checklist{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    position: relative;
+}
+li{
+    list-style: none;
+    width: 12px;
+    height: 12px;
+    border: 2px solid black;
+    text-indent: 20px;
+    cursor: pointer;
+    margin:10px;
+    position: relative;
+}
+.tick{
+    position: absolute;
+    top:-3px;
+    left:-21px;
+    
+}
+
+/*#add_item{
+    position: absolute;
+    left:200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+input{
+    width:200px;
+    height: 30px;
+}
+#add{
+    width: 80px;
+}*/

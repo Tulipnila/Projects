@@ -1,0 +1,4 @@
+<div (dblclick)="onDoubleClick($event)" class="box-container">
+    <div *ngFor="let box of boxes" class="generated-box" [style.left.px]="box.x" [style.top.px]="box.y"></div>
+  </div>
+  <app-child></app-child>

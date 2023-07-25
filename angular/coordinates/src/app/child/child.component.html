@@ -1,0 +1,6 @@
+<div class="displayContainer">
+    <div id="displayArea">display</div>
+    <ul>
+        <li *ngFor="let item of items">{{item}} <button (click)="onDelete(item)">Delete</button></li>
+    </ul>
+</div>

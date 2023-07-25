@@ -1,0 +1,8 @@
+<div class="container">
+<label for="">Font-Size:</label>
+<input type="range" id = "volume"  min="20" max="100" [(ngModel)]="limit">
+<input type="text" id="input" value = "{{limit}}" [(ngModel)]="limit" [ngStyle]="{'color':color,'font-size':limit + 'px'}">
+<label for="">Color:</label><input type="color" id="changeColor"[(ngModel)]="color">
+<p  id="text" [ngStyle]="{'color':color,'font-size':limit + 'px'}">{{ text }}</p>
+</div>
+

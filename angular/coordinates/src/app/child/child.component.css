@@ -1,0 +1,9 @@
+.displayContainer{
+    padding: 20px;
+}
+#displayArea{
+    font-size: 20px;
+}
+ul{
+    list-style: none;
+}

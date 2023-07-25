@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+.inputContainer{
+    width: 350px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-indent: 50px;
+    position: relative;
+
+    
+}
+p{
+    font-size: 20px;
+}
+input{
+    width: 180px;
+    height: 25px;
+}
+.inputContainer .icon{
+    width: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}

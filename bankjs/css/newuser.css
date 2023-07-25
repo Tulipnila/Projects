@@ -1,8 +1,11 @@
+/* CSS styles in newuser.css file */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     width: 100vw;
     height: 100vh;
@@ -12,16 +15,18 @@ body{
     width: 100%;
     height: 100%;
 }
+
 #signUpBox{
-    width: 70%;
+    width: 80%;
     min-width: 1300px;
-    height: 88%;
+    height: 95%;
     min-height: 620px;
     margin: 0 auto;
     box-shadow: 3px 3px 5px 5px rgba(128, 0, 128, 0.226);
     display: grid;
     grid-template-rows: 100px 1fr;
 }
+
 header{
     border-bottom: 10px solid purple;
     display: flex;
@@ -32,10 +37,12 @@ header{
     text-shadow: -2px -2px purple;
     color:rgba(128, 0, 128, 0.365);
 }
+
 main{
     display: grid;
-    grid-template-rows: 80px 1fr 50px;
+    grid-template-rows: 80px 1fr .5fr 50px;
 }
+
 nav p{
     margin-top:15px;
     text-indent: 30px;
@@ -43,50 +50,83 @@ nav p{
     font-weight: 500;
     font-size: 20px;
 }
+
 h5{
     text-indent: 30px;
     margin-top:15px;
     font-style: italic;
     color:rgb(255, 166, 0);   
 }
-aside{
-    border-bottom: 3px solid rgba(128, 0, 128, 0.518);
+
+form{
     padding-left:40px;
     padding-right:40px;
-    gap:20px;
-    display: flex;
-    flex-direction: column;
+    gap:10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 60px);
 }
-input{
-    width: 300px;
-    height: 40px;
-    border-radius: 10px;
-    outline:none;
-    border-color: rgba(128, 128, 128, 0.541);
-    
+p+footer{
+    border-top: 3px solid rgba(128, 0, 128, 0.518);
+
 }
-input:focus{
-    box-shadow: 0px 0px 2px 2px rgba(128, 0, 128, 0.326);
-    border-color: purple;
-}
-form{
+.inputControl{
     display: flex;
     gap:15px;
+    position: relative;
 }
-form label{
+
+.inputControl input{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    text-indent: 10px;
+    outline:none;
+    border: 2px solid black;
+}
+
+.inputControl.error input{
+    border-color: red;
+}
+
+
+.inputControl input:valid {
+    border: 2px solid green;
+}
+
+.inputControl label{
     width: 180px;
     height: 40px;
     font-size: 15px;
     display: flex;
     align-items: center;
 }
-form p{
-    width: 500px;
+
+.inputControl p{
+    width: 200px;
     height: 40px;
     font-size: 12px;
     display: flex;
     align-items: center;
 }
+
+.inputControl i{
+    visibility: hidden;
+    position: absolute;
+    left:460px;
+    top:12px;
+}
+
+#small{
+    width: 200px;
+    height: 2px;
+    position: absolute;
+    bottom:-12px;
+    left:220px;
+    color:red;
+    font-size: 12px;
+}
+
 footer{
     width: 100%;
     display: flex;
@@ -97,18 +137,22 @@ footer{
     padding-left:40px;
     padding-right:40px;
 }
+
 #terms{
     width: 70%;
 }
+
 #rights{
     width: 30%;
     text-indent: 10px;
 }
+
 ul{
     display: flex;
     justify-content: flex-end;
     gap:20px;
 }
+
 li{
     border-left:2px solid grey;
     list-style-type: none;
@@ -119,9 +163,16 @@ sup{
     color:rgb(255, 140, 0);   
 
 }
+aside{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding-left:30px;
+}
 .agreePara{
     font-size: 15px;
 }
+
 button{
     width: 80px;
     height: 25px;
@@ -134,39 +185,27 @@ button{
     border:none;
     box-shadow: 2px 2px 3px 3px orange;
 }
+
 #button1{
     display: flex;
     gap:20px;
     justify-content: center;
 }
+
 #button2{
-    position: relative;
+   display: flex;
+   justify-content: center;
 }
-#submit{
-    position: absolute;
-    left: 47.5%;
-}
-form{
-    position: relative;
-}
-form i{
-    visibility: hidden;
-    position: absolute;
-    left:460px;
-    top:12px;
-}
-small{
-    width: 250px;
-    height: 10px;
-    position: absolute;
-    bottom: -12px;
-    left:220px;
-    color: red;
-}
+
 #agree:focus{
     opacity: .5;
     cursor: not-allowed;
 }
+
+#start{
+    text-indent: 30px;
+}
+
 @media (max-width: 768px) {
     body {
       font-size: 14px;
@@ -196,7 +235,7 @@ small{
       font-size: 16px;
     }
   
-    aside {
+    form{
       padding-left: 20px;
       padding-right: 20px;
     }
@@ -205,12 +244,12 @@ small{
       width: 100%;
     }
   
-    form label {
+    .inputControl label {
       width: 100%;
       font-size: 14px;
     }
   
-    form p {
+    .inputControl p {
       width: 100%;
       font-size: 11px;
     }
@@ -220,5 +259,8 @@ small{
       padding-left: 20px;
       padding-right: 20px;
     }
+
+    #start{
+        text-indent: 10px;
+    }
   }
-  

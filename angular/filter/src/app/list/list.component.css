@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+}
+ul{
+    width: 204px;
+    list-style:none;
+    border:2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+li{
+    cursor: pointer;
+}
+li:active, li:hover{
+    background-color: rgba(128, 128, 128, 0.62);
+}
