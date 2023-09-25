@@ -1,0 +1,29 @@
+<h3 class="title">Checkout</h3>
+
+<div *ngIf="books; then booksAvailable else noBooksAvailable">
+    Books variable exist !
+</div>
+<ng-template #booksAvailable>
+    Books Available !
+    <div *ngFor = "let obj of books; index as i; even as e; odd as o; first as f; last as l;">
+        <div [ngSwitch]="obj.bookStatus">
+            <!--<div *ngSwitchCase="'Available'" [ngStyle]="{'color':'green'}">
+                {{i}} - {{obj.bookName}}
+            </div>
+            <div *ngSwitchCase="'Not Available'" [ngStyle]="{'text-decoration':'line-through'}">
+                {{i}} - {{obj.bookName}}
+            </div>
+            <div *ngSwitchDefault>
+                Default - {{obj.bookName}}
+            </div>-->
+            <div [ngClass]="{'navlstyle': obj.bookStatus == 'Not Available', 'avlstyle': obj.bookStatus==='Available',
+                                'npstyle': obj.bookStatus ==='Not Printing'}">
+                            {{i}} - {{obj.bookName}}
+                            </div>
+        </div>
+       
+    </div>
+</ng-template>
+<ng-template #noBooksAvailable>
+    No Books !
+</ng-template>

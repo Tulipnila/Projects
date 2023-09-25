@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BoxService, Box } from '../box.service';
 
 @Component({
   selector: 'app-child',
@@ -6,12 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
-  items : string[] = ['Item1', 'Item2', 'Item3', 'Item4', 'Item5'];
+  selectedBox: Box | null = null;
 
-  onDelete(item:string) {
-    const index = this.items.indexOf(item);
-    if(index !== -1) {
-      this.items.splice(index,1);
-    }
+  constructor(public boxService: BoxService){} 
+
+  toggleBox(box: Box) {
+    this.selectedBox = this.selectedBox === box ? null : box;
+  }
+  
+  onDeleteBox(box: Box) {
+    this.boxService.deleteBox(box);
   }
 }

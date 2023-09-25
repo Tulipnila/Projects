@@ -18,3 +18,10 @@
     place-self: center;
     background-color: rgba(0, 128, 0, 0.476);
 }
+.add:focus app-add{
+    display: block;
+}
+.container.blur {
+    filter: blur(2px);
+    pointer-events: none;
+}

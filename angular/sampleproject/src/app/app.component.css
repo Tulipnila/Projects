@@ -1,0 +1,16 @@
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+}
+.col{
+    height: 500px;
+    border: 2px solid black;
+    padding: 10px;
+
+}
+h2{
+    font-size: 25px;
+    background-color: skyblue;
+    text-align: center;
+}

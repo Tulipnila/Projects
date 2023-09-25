@@ -1,6 +1,8 @@
-<div class="container">
+<div class="container" [class.blur]="isAddComponentVisible">
   <app-parent></app-parent>
   <app-child></app-child>
-  <button class="add">ADD</button>
+  <button (click)="toggleAddContainer()" (click)="showAddComponent()" class="add">ADD</button>
 </div>
-<router-outlet></router-outlet>
+<app-add *ngIf="isAddComponentVisible" (close)="hideAddComponent()"  class="add-container"></app-add>
+
+

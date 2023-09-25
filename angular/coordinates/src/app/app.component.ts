@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'coordinates';
+  isAddComponentVisible = false;
+  showAddContainer = false;
+
+  showAddComponent() {
+    this.isAddComponentVisible = true;
+  }
+
+  hideAddComponent() {
+    this.isAddComponentVisible = false;
+  }
+  toggleAddContainer() {
+    this.showAddContainer = !this.showAddContainer;
+  }
 }
